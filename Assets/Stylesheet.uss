@@ -1,0 +1,20 @@
+.button {
+    background-color: rgb(255, 243, 220);
+    font-size: 45px;
+    color: rgb(0, 0, 0);
+    -unity-font-style: normal;
+    flex-grow: 1;
+    height: auto;
+    width: auto;
+    -unity-text-outline-width: 0;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    min-width: 100px;
+    min-height: 45px;
+}
