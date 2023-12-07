@@ -1,12 +1,8 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using UnityEditor;
 using UnityEngine;
-
-using Material = UnityEngine.Material;
 
 public class AnimationCapture : MonoBehaviour
 {
@@ -119,6 +115,6 @@ public class AnimationCapture : MonoBehaviour
 
         Debug.Log("DiffuseMap: " + diffusePath + " NormalMap: " + normalPath);
         
-        AssetDatabase.Refresh();
+        //AssetDatabase.Refresh();
     }
 }

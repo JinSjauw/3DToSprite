@@ -18,3 +18,9 @@
     min-width: 100px;
     min-height: 45px;
 }
+
+.unity {
+    -unity-text-align: upper-left;
+    white-space: nowrap;
+    text-overflow: clip;
+}
