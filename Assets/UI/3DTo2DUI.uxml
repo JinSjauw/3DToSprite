@@ -13,19 +13,19 @@
             <ui:VisualElement name="ControlsContainer" style="flex-grow: 0; background-color: rgba(255, 235, 201, 0.45); flex-basis: 35px; align-items: flex-start; align-self: flex-start; justify-content: center; min-width: 203px; min-height: 47px; translate: 0 0; flex-shrink: 1; height: 476px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgba(0, 0, 0, 0.74); border-right-color: rgba(0, 0, 0, 0.74); border-top-color: rgba(0, 0, 0, 0.74); border-bottom-color: rgba(0, 0, 0, 0.74); border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; width: 250px; margin-left: 22px;">
                 <ui:VisualElement name="frameResolution" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 100%; flex-direction: column; margin-left: 10px; height: auto; min-height: 125px; flex-basis: 34px;">
                     <ui:Label tabindex="-1" text="Cell Size (x, y)" display-tooltip-when-elided="true" style="margin-left: 5px;" />
-                    <ui:IntegerField value="64" name="IntegerField" style="width: 124px;" />
-                    <ui:IntegerField value="64" style="width: 123px;" />
+                    <ui:IntegerField value="64" name="CellSizeX" style="width: 124px;" />
+                    <ui:IntegerField value="64" name="CellSizeY" style="width: 123px;" />
                 </ui:VisualElement>
                 <ui:VisualElement name="objectRotation" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 100%; flex-direction: column; margin-left: 10px; height: 124px; min-height: 125px; flex-basis: 34px;">
                     <ui:Label tabindex="-1" text="Object Rotation (x, y)" display-tooltip-when-elided="true" name="Label" enable-rich-text="false" style="margin-left: 5px;" />
-                    <ui:IntegerField value="64" name="IntegerField" style="width: 124px;" />
-                    <ui:IntegerField value="64" style="width: 123px;" />
+                    <ui:FloatField value="0" name="RotationX" style="width: 125px;" />
+                    <ui:FloatField value="0" name="RotationY" style="width: 125px;" />
                 </ui:VisualElement>
                 <ui:VisualElement name="objectScale" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 100%; flex-direction: column; margin-left: 10px; height: auto; min-height: 135px; flex-basis: 34px;">
                     <ui:Label tabindex="-1" text="Object Scale (x, y, z)" display-tooltip-when-elided="true" name="Label" enable-rich-text="false" style="margin-left: 5px;" />
-                    <ui:IntegerField value="64" name="IntegerField" style="width: 124px;" />
-                    <ui:IntegerField value="64" style="width: 123px;" />
-                    <ui:IntegerField value="64" style="width: 123px;" />
+                    <ui:FloatField value="0" name="ScaleX" style="width: 125px;" />
+                    <ui:FloatField value="0" name="ScaleY" style="width: 125px;" />
+                    <ui:FloatField value="0" name="ScaleZ" style="width: 125px;" />
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="ListContainer" style="flex-grow: 0; background-color: rgba(255, 235, 201, 0.45); flex-basis: auto; align-items: flex-start; align-self: flex-start; justify-content: center; min-width: 203px; min-height: 300px; translate: 0 0; flex-shrink: 1; height: auto; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgba(0, 0, 0, 0.74); border-right-color: rgba(0, 0, 0, 0.74); border-top-color: rgba(0, 0, 0, 0.74); border-bottom-color: rgba(0, 0, 0, 0.74); border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; width: 250px; right: 0; position: absolute; margin-right: 22px;">

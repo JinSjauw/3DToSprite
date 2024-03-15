@@ -11,13 +11,18 @@ public class AnimationCapture : MonoBehaviour
     [SerializeField] private int frameRate;
     [SerializeField] private Camera captureCamera;
     [SerializeField] private Shader viewSpaceNormal;
-    [SerializeField] private Vector2Int _cellSize = new Vector2Int(100, 100);
+    [SerializeField] private Vector2Int cellSize = new Vector2Int(100, 100);
     
     // Start is called before the first frame update
-    void Start()
+    public void Crunch(AnimationClip clip, GameObject target, int frames, Vector2Int size)
     {
      Debug.Log("Amount of frames" + (int)(sourceClip.length * frameRate));
-     StartCoroutine(CaptureAnimation(SaveCapture));
+     sourceClip = clip;
+     animationTarget = target;
+     frameRate = frames;
+     cellSize = size;
+     
+     StartCoroutine(CaptureAnimation(IOHandler.SaveCapture));
     }
 
     private IEnumerator CaptureAnimation(Action<Texture2D, Texture2D> onComplete)
@@ -25,8 +30,8 @@ public class AnimationCapture : MonoBehaviour
         int numberOfFrames = (int)(sourceClip.length * frameRate);
         var cellCount = Mathf.CeilToInt(Mathf.Sqrt(numberOfFrames));
         
-        Vector2Int atlasSize = new Vector2Int(_cellSize.x * cellCount, _cellSize.y * cellCount);
-        Vector2Int atlasPos = new Vector2Int(0, atlasSize.y - _cellSize.y);
+        Vector2Int atlasSize = new Vector2Int(cellSize.x * cellCount, cellSize.y * cellCount);
+        Vector2Int atlasPos = new Vector2Int(0, atlasSize.y - cellSize.y);
         
         Texture2D diffuseMap = new Texture2D(atlasSize.x, atlasSize.y, TextureFormat.ARGB32, false)
         {
@@ -40,7 +45,7 @@ public class AnimationCapture : MonoBehaviour
         };
         ClearAtlas(normalMap, new Color(0.5f, 0.5f, 1.0f, 0.0f));
         
-        RenderTexture rtFrame = new RenderTexture(_cellSize.x, _cellSize.y, 24, RenderTextureFormat.ARGB32)
+        RenderTexture rtFrame = new RenderTexture(cellSize.x, cellSize.y, 24, RenderTextureFormat.ARGB32)
         {
             filterMode = FilterMode.Point,
             antiAliasing = 1,
@@ -72,12 +77,12 @@ public class AnimationCapture : MonoBehaviour
                 normalMap.ReadPixels(new Rect(0, 0, rtFrame.width, rtFrame.height), atlasPos.x, atlasPos.y);
                 normalMap.Apply();
             
-                atlasPos.x += _cellSize.x;
+                atlasPos.x += cellSize.x;
 
                 if ((currentFrame + 1) % cellCount == 0)
                 {
                     atlasPos.x = 0;
-                    atlasPos.y -= _cellSize.y;
+                    atlasPos.y -= cellSize.y;
                 }
             }
             onComplete.Invoke(diffuseMap, normalMap);
@@ -103,7 +108,7 @@ public class AnimationCapture : MonoBehaviour
         texture.Apply();
     }
 
-    private void SaveCapture(Texture2D diffuseMap, Texture2D normalMap)
+    /*private void SaveCapture(Texture2D diffuseMap, Texture2D normalMap)
     {
         var fileName = Path.GetFileNameWithoutExtension("CharacterTest");
         var directory = Application.dataPath;
@@ -115,6 +120,11 @@ public class AnimationCapture : MonoBehaviour
 
         Debug.Log("DiffuseMap: " + diffusePath + " NormalMap: " + normalPath);
         
-        //AssetDatabase.Refresh();
+        AssetDatabase.Refresh();
+    }*/
+
+    private void CreatePreviewMaterial(Texture2D diffuseMap, Texture2D normalMap)
+    {
+        
     }
 }
