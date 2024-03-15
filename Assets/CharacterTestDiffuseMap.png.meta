@@ -114,9 +114,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 300
-        width: 50
-        height: 50
+        y: 6000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,10 +134,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_1
       rect:
         serializedVersion: 2
-        x: 50
-        y: 300
-        width: 50
-        height: 50
+        x: 1000
+        y: 6000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,10 +155,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_2
       rect:
         serializedVersion: 2
-        x: 100
-        y: 300
-        width: 50
-        height: 50
+        x: 2000
+        y: 6000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,10 +176,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_3
       rect:
         serializedVersion: 2
-        x: 150
-        y: 300
-        width: 50
-        height: 50
+        x: 3000
+        y: 6000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,10 +197,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_4
       rect:
         serializedVersion: 2
-        x: 200
-        y: 300
-        width: 50
-        height: 50
+        x: 4000
+        y: 6000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,10 +218,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_5
       rect:
         serializedVersion: 2
-        x: 250
-        y: 300
-        width: 50
-        height: 50
+        x: 5000
+        y: 6000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,10 +239,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_6
       rect:
         serializedVersion: 2
-        x: 300
-        y: 300
-        width: 50
-        height: 50
+        x: 6000
+        y: 6000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,9 +261,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 250
-        width: 50
-        height: 50
+        y: 5000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,10 +281,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_8
       rect:
         serializedVersion: 2
-        x: 50
-        y: 250
-        width: 50
-        height: 50
+        x: 1000
+        y: 5000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,10 +302,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_9
       rect:
         serializedVersion: 2
-        x: 100
-        y: 250
-        width: 50
-        height: 50
+        x: 2000
+        y: 5000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,10 +323,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_10
       rect:
         serializedVersion: 2
-        x: 150
-        y: 250
-        width: 50
-        height: 50
+        x: 3000
+        y: 5000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,10 +344,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_11
       rect:
         serializedVersion: 2
-        x: 200
-        y: 250
-        width: 50
-        height: 50
+        x: 4000
+        y: 5000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -365,10 +365,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_12
       rect:
         serializedVersion: 2
-        x: 250
-        y: 250
-        width: 50
-        height: 50
+        x: 5000
+        y: 5000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -386,10 +386,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_13
       rect:
         serializedVersion: 2
-        x: 300
-        y: 250
-        width: 50
-        height: 50
+        x: 6000
+        y: 5000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -408,9 +408,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 200
-        width: 50
-        height: 50
+        y: 4000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -428,10 +428,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_15
       rect:
         serializedVersion: 2
-        x: 50
-        y: 200
-        width: 50
-        height: 50
+        x: 1000
+        y: 4000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -449,10 +449,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_16
       rect:
         serializedVersion: 2
-        x: 100
-        y: 200
-        width: 50
-        height: 50
+        x: 2000
+        y: 4000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -470,10 +470,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_17
       rect:
         serializedVersion: 2
-        x: 150
-        y: 200
-        width: 50
-        height: 50
+        x: 3000
+        y: 4000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -491,10 +491,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_18
       rect:
         serializedVersion: 2
-        x: 200
-        y: 200
-        width: 50
-        height: 50
+        x: 4000
+        y: 4000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -512,10 +512,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_19
       rect:
         serializedVersion: 2
-        x: 250
-        y: 200
-        width: 50
-        height: 50
+        x: 5000
+        y: 4000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -533,10 +533,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_20
       rect:
         serializedVersion: 2
-        x: 300
-        y: 200
-        width: 50
-        height: 50
+        x: 6000
+        y: 4000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -555,9 +555,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 150
-        width: 50
-        height: 50
+        y: 3000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -575,10 +575,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_22
       rect:
         serializedVersion: 2
-        x: 50
-        y: 150
-        width: 50
-        height: 50
+        x: 1000
+        y: 3000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -596,10 +596,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_23
       rect:
         serializedVersion: 2
-        x: 100
-        y: 150
-        width: 50
-        height: 50
+        x: 2000
+        y: 3000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -617,10 +617,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_24
       rect:
         serializedVersion: 2
-        x: 150
-        y: 150
-        width: 50
-        height: 50
+        x: 3000
+        y: 3000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -638,10 +638,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_25
       rect:
         serializedVersion: 2
-        x: 200
-        y: 150
-        width: 50
-        height: 50
+        x: 4000
+        y: 3000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -659,10 +659,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_26
       rect:
         serializedVersion: 2
-        x: 250
-        y: 150
-        width: 50
-        height: 50
+        x: 5000
+        y: 3000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -680,10 +680,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_27
       rect:
         serializedVersion: 2
-        x: 300
-        y: 150
-        width: 50
-        height: 50
+        x: 6000
+        y: 3000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -702,9 +702,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 100
-        width: 50
-        height: 50
+        y: 2000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -722,10 +722,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_29
       rect:
         serializedVersion: 2
-        x: 50
-        y: 100
-        width: 50
-        height: 50
+        x: 1000
+        y: 2000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -743,10 +743,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_30
       rect:
         serializedVersion: 2
-        x: 100
-        y: 100
-        width: 50
-        height: 50
+        x: 2000
+        y: 2000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -764,10 +764,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_31
       rect:
         serializedVersion: 2
-        x: 150
-        y: 100
-        width: 50
-        height: 50
+        x: 3000
+        y: 2000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -785,10 +785,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_32
       rect:
         serializedVersion: 2
-        x: 200
-        y: 100
-        width: 50
-        height: 50
+        x: 4000
+        y: 2000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -806,10 +806,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_33
       rect:
         serializedVersion: 2
-        x: 250
-        y: 100
-        width: 50
-        height: 50
+        x: 5000
+        y: 2000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -827,10 +827,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_34
       rect:
         serializedVersion: 2
-        x: 300
-        y: 100
-        width: 50
-        height: 50
+        x: 6000
+        y: 2000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -849,9 +849,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 50
-        width: 50
-        height: 50
+        y: 1000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -869,10 +869,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_36
       rect:
         serializedVersion: 2
-        x: 50
-        y: 50
-        width: 50
-        height: 50
+        x: 1000
+        y: 1000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -890,10 +890,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_37
       rect:
         serializedVersion: 2
-        x: 100
-        y: 50
-        width: 50
-        height: 50
+        x: 2000
+        y: 1000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -911,10 +911,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_38
       rect:
         serializedVersion: 2
-        x: 150
-        y: 50
-        width: 50
-        height: 50
+        x: 3000
+        y: 1000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -932,10 +932,10 @@ TextureImporter:
       name: CharacterTestDiffuseMap_39
       rect:
         serializedVersion: 2
-        x: 200
-        y: 50
-        width: 50
-        height: 50
+        x: 4000
+        y: 1000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

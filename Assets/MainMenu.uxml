@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Template name="3DTo2DUI" src="project://database/Assets/UI/3DTo2DUI.uxml?fileID=9197481963319205126&amp;guid=762f5d92c245d154aad4995acd582626&amp;type=3#3DTo2DUI" />
+    <ui:Instance template="3DTo2DUI" name="3DTo2DUI" />
+</ui:UXML>
