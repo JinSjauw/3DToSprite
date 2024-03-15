@@ -7,7 +7,7 @@
             <ui:Button text="Export" display-tooltip-when-elided="true" name="ButtonExport" class="button" style="margin-left: 0; margin-right: 0; font-size: 12%; flex-grow: 0; flex-shrink: 1; min-width: auto; min-height: auto; width: 61px; height: auto; margin-top: 0; margin-bottom: 0; border-left-width: 0; border-right-width: 1px; border-top-width: 0; border-bottom-width: 0;" />
         </ui:VisualElement>
         <ui:VisualElement name="Debug" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); align-self: flex-end; flex-basis: 20%; min-width: 20%; min-height: 15%; translate: 0 0; height: 71px; justify-content: flex-end; position: absolute; top: 33px;">
-            <ui:Label tabindex="-1" text="Debug Text&#10;" display-tooltip-when-elided="true" name="DebugText" style="flex-shrink: 1; flex-grow: 1; flex-basis: 100%; -unity-font-style: normal; color: rgb(255, 255, 255); height: 70px; translate: 0 0;" />
+            <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="DebugText" style="flex-shrink: 1; flex-grow: 1; flex-basis: 100%; -unity-font-style: normal; color: rgb(255, 255, 255); height: 70px; translate: 0 0;" />
         </ui:VisualElement>
         <ui:VisualElement style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-direction: row; justify-content: flex-start; translate: 0 -200px; height: 332px;">
             <ui:VisualElement name="ControlsContainer" style="flex-grow: 0; background-color: rgba(255, 235, 201, 0.45); flex-basis: 35px; align-items: flex-start; align-self: flex-start; justify-content: center; min-width: 203px; min-height: 47px; translate: 0 0; flex-shrink: 1; height: 476px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgba(0, 0, 0, 0.74); border-right-color: rgba(0, 0, 0, 0.74); border-top-color: rgba(0, 0, 0, 0.74); border-bottom-color: rgba(0, 0, 0, 0.74); border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; width: 250px; margin-left: 22px;">
@@ -35,7 +35,7 @@
         </ui:VisualElement>
         <ui:VisualElement name="container" style="flex-grow: 0; background-color: rgba(255, 235, 201, 0.45); bottom: auto; flex-basis: 20%; flex-wrap: nowrap; flex-direction: row; justify-content: center; align-items: center; height: auto; width: auto; max-width: none; max-height: 100px; padding-left: 15%; padding-right: 15%; align-self: stretch; -unity-text-outline-width: 0; -unity-text-outline-color: rgba(0, 0, 0, 0); border-top-color: rgba(0, 0, 0, 0.66); border-left-width: 0; border-right-width: 0; border-top-width: 2px; border-bottom-width: 0; position: relative;">
             <ui:Button text="Import Mesh" display-tooltip-when-elided="true" name="ButtonImportMesh" class="button" style="margin-left: 5%; margin-right: 5%; font-size: 12%;" />
-            <ui:Button text="Crunch" display-tooltip-when-elided="true" name="ButtonCrunch" class="button" style="margin-left: 5%; margin-right: 5%; font-size: 12%;" />
+            <ui:Button text="Crunch" display-tooltip-when-elided="true" name="ButtonPixelate" class="button" style="margin-left: 5%; margin-right: 5%; font-size: 12%;" />
             <ui:Button text="Preview Sprite" display-tooltip-when-elided="true" name="ButtonPreviewSprite" class="button" style="margin-left: 5%; margin-right: 5%; font-size: 12%; width: auto; height: auto;" />
         </ui:VisualElement>
     </ui:VisualElement>

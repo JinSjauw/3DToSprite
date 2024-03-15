@@ -61,16 +61,17 @@ public class UIController : MonoBehaviour
         
         //Bottom Bar
         Button buttonImportMesh = root.Q<Button>("ButtonImportMesh");
-        Button buttonCrunch = root.Q<Button>("ButtonCrunch");
+        Button buttonCrunch = root.Q<Button>("ButtonPixelate");
         Button buttonPreview = root.Q<Button>("ButtonPreviewSprite");
 
         debugLabel = root.Q<Label>("DebugText");
 
         saveButton.clicked += () => SaveProjectData();
         loadButton.clicked += () => LoadProjectData();
+        exportButton.clicked += () => Pixelate();
         
         buttonImportMesh.clicked += () => ImportMesh();
-        buttonCrunch.clicked += () => Crunch();
+        //buttonCrunch.clicked += () => Pixelate();
         buttonPreview.clicked += () => PreviewSprite();
         
         RegisterFieldCallbacks();
@@ -178,7 +179,6 @@ public class UIController : MonoBehaviour
         
         animationsListView.selectionType = SelectionType.Single;
         animationsListView.itemsChosen += SampleListAnimation;
-        //animationsListView.selectionChanged += SampleListAnimation;
     }
     private void UpdateAnimationsList(AnimationClip[] animations)
     {
@@ -247,9 +247,18 @@ public class UIController : MonoBehaviour
         Debug.Log("Preview Sprite");
     }
 
-    private void Crunch()
+    private void Pixelate()
     {
-        animationPlayer.Stop();
-        capturer.Crunch(animationPlayer.clip, anchorPoint, 60, cellSize);
+        if (animationPlayer != null)
+        {
+            animationPlayer.Stop();
+            capturer.Pixelate(animationPlayer.clip, anchorPoint, 60, cellSize);
+        }
+        else
+        {
+            Debug.Log("No Animation Component!");
+        }
+        
+        
     }
 }

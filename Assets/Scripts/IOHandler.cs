@@ -18,7 +18,11 @@ public static class IOHandler
         string json = JsonUtility.ToJson(data);
         File.WriteAllText(path, json);
         Debug.Log(path);
+
+        #if UNITY_EDITOR
         AssetDatabase.Refresh();
+        #endif
+        
     }
 
     public static ProjectData LoadProjectData()
@@ -72,16 +76,24 @@ public static class IOHandler
     
     public static void SaveCapture(Texture2D diffuseMap, Texture2D normalMap)
     {
-        var fileName = Path.GetFileNameWithoutExtension("CharacterTest");
+        var path = StandaloneFileBrowser.SaveFilePanel("Save Files", Application.dataPath, "SpriteSheet", "");
+        
+        /*var fileName = Path.GetFileNameWithoutExtension("CharacterTest");
         var directory = Application.dataPath;
         var diffusePath = string.Format("{0}/{1}{2}.{3}", directory, fileName, "DiffuseMap", "png");
-        var normalPath = string.Format("{0}/{1}{2}.{3}", directory, fileName, "NormalMap", "png");
+        var normalPath = string.Format("{0}/{1}{2}.{3}", directory, fileName, "NormalMap", "png");*/
 
-        File.WriteAllBytes(diffusePath, diffuseMap.EncodeToPNG());
-        File.WriteAllBytes(normalPath, normalMap.EncodeToPNG());
-
-        Debug.Log("DiffuseMap: " + diffusePath + " NormalMap: " + normalPath);
+        var diffusePath2 = string.Format("{0}{1}.{2}", path, "DiffuseMap", ".png");
+        var normalPath2 = string.Format("{0}{1}.{2}", path, "NormalMap", ".png");
         
+        File.WriteAllBytes(diffusePath2, diffuseMap.EncodeToPNG());
+        File.WriteAllBytes(normalPath2, normalMap.EncodeToPNG());
+
+        Debug.Log("DiffuseMap: " + diffusePath2 + " NormalMap: " + normalPath2);
+        
+        #if UNITY_EDITOR
         AssetDatabase.Refresh();
+        #endif
+        
     }
 }

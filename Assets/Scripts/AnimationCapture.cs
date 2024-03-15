@@ -14,7 +14,7 @@ public class AnimationCapture : MonoBehaviour
     [SerializeField] private Vector2Int cellSize = new Vector2Int(100, 100);
     
     // Start is called before the first frame update
-    public void Crunch(AnimationClip clip, GameObject target, int frames, Vector2Int size)
+    public void Pixelate(AnimationClip clip, GameObject target, int frames, Vector2Int size)
     {
      Debug.Log("Amount of frames" + (int)(sourceClip.length * frameRate));
      sourceClip = clip;
