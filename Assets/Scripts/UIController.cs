@@ -91,7 +91,7 @@ public class UIController : MonoBehaviour
 
     private void LoadProjectData()
     {
-        ProjectData projectData = IOHandler.LoadProjectData();
+        ProjectData projectData = IOHandler.DeserializeProjectData();
 
         CleanPrevious();
         IOHandler.ImportMesh(projectData.meshURL, anchorPoint.transform, PostLoad);

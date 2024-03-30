@@ -25,7 +25,7 @@ public static class IOHandler
         
     }
 
-    public static ProjectData LoadProjectData()
+    public static ProjectData DeserializeProjectData()
     {
         //open the filebrowser
         ProjectData projectData = new ProjectData();
