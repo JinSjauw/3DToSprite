@@ -45,10 +45,9 @@ public static class IOHandler
     public static void ImportMesh(Transform anchorPoint, Action<AnimationClip[], string> onSuccess)
     {
         Debug.Log("Import Mesh");
-        var paths = StandaloneFileBrowser.OpenFilePanel("Title", "", "glb", false);
+        var paths = StandaloneFileBrowser.OpenFilePanel("Select .GLB", "", "glb", false);
         if (paths.Length > 0) {
             Debug.Log("Path: " + paths[0]);
-            //debugLabel.text = "Loading Model from URI";
             
             LoadFromMemory(paths[0], anchorPoint, onSuccess);
         }
@@ -77,11 +76,6 @@ public static class IOHandler
     public static void SaveCapture(Texture2D diffuseMap, Texture2D normalMap)
     {
         var path = StandaloneFileBrowser.SaveFilePanel("Save Files", Application.dataPath, "SpriteSheet", "");
-        
-        /*var fileName = Path.GetFileNameWithoutExtension("CharacterTest");
-        var directory = Application.dataPath;
-        var diffusePath = string.Format("{0}/{1}{2}.{3}", directory, fileName, "DiffuseMap", "png");
-        var normalPath = string.Format("{0}/{1}{2}.{3}", directory, fileName, "NormalMap", "png");*/
 
         var diffusePath2 = string.Format("{0}{1}.{2}", path, "DiffuseMap", ".png");
         var normalPath2 = string.Format("{0}{1}.{2}", path, "NormalMap", ".png");

@@ -154,6 +154,19 @@ public class UIController : MonoBehaviour
             scale.z = evt.newValue;
             ApplyScale();
         });    
+        
+        //ListVew
+        animationsListView.RegisterCallback<PointerLeaveEvent>(evt =>
+        {
+            animationsListView.ClearSelection();
+
+            if (animationPlayer != null)
+            {
+                animationPlayer.Stop();
+                //animationPlayer.clip = null;
+            }
+            
+        });
     }
     private void ApplyRotation()
     {
@@ -179,6 +192,7 @@ public class UIController : MonoBehaviour
         
         animationsListView.selectionType = SelectionType.Single;
         animationsListView.itemsChosen += SampleListAnimation;
+        animationsListView.selectionChanged += SampleListAnimation;
     }
     private void UpdateAnimationsList(AnimationClip[] animations)
     {
@@ -192,6 +206,12 @@ public class UIController : MonoBehaviour
     }
     private void SampleListAnimation(IEnumerable<object> obj)
     {
+        if (!obj.Any())
+        {
+            Debug.Log("No Animations Selected!");
+            return;
+        }
+        
         AnimationClip clipToPlay = (AnimationClip)obj.First();
 
         if (animationPlayer != null)
