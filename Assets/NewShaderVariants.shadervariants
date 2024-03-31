@@ -72,17 +72,7 @@ ShaderVariantCollection:
         passType: 0
   - first: {fileID: 4800000, guid: 99fa998bbbed3408aafa652b466d261d, type: 3}
     second:
-      variants:
-      - keywords: DIRECTIONAL LIGHTPROBE_SH
-        passType: 4
-      - keywords: DIRECTIONAL LIGHTPROBE_SH SHADOWS_SCREEN
-        passType: 4
-      - keywords: DIRECTIONAL
-        passType: 5
-      - keywords: 
-        passType: 8
-      - keywords: SHADOWS_DEPTH
-        passType: 8
+      variants: []
   - first: {fileID: 4800000, guid: 4340a3cf1cde6416d957808a6ac79eed, type: 3}
     second:
       variants:

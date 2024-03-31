@@ -63,13 +63,12 @@ public static class IOHandler
         byte[] data = File.ReadAllBytes(path);
         var gltf = new GltfImport();
         bool success = await gltf.LoadGltfBinary(data, new Uri("file://" + path));
-        
         //debugLabel.text = "Progress: " + success;
         
         if (success)
         {
-            onSuccess(gltf.GetAnimationClips(), path);
             success = await gltf.InstantiateMainSceneAsync(anchorPoint);
+            onSuccess(gltf.GetAnimationClips(), path);
         }
     }
     

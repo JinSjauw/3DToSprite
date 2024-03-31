@@ -10,9 +10,11 @@ using UnityEngine.UIElements;
 public class UIController : MonoBehaviour
 {
     [SerializeField] private AnimationCapture capturer;
+    [SerializeField] private Shader unlitShader;
     [SerializeField] private GameObject anchorPoint;
     [SerializeField] private List<AnimationClip> animationClips;
     [SerializeField] private GameObject spritePreview;
+    
     private bool isPreviewing;
     
     private ListView animationsListView;
@@ -260,6 +262,15 @@ public class UIController : MonoBehaviour
         //Apply settings
         ApplyRotation();
         ApplyScale();
+        
+        //Go through all materials and set shader to unlit
+        Renderer[] renderers = anchorPoint.GetComponentsInChildren<Renderer>();
+        Debug.Log("Finding renderers: " + renderers.Length);
+        foreach (var renderer in renderers)
+        {
+            Debug.Log("Finding shader");
+            renderer.sharedMaterial.shader = unlitShader;
+        }
     }
     
     private void PreviewSprite()
