@@ -1,7 +1,5 @@
 using System;
 using System.Collections;
-using System.IO;
-using UnityEditor;
 using UnityEngine;
 
 public class AnimationCapture : MonoBehaviour
@@ -11,7 +9,7 @@ public class AnimationCapture : MonoBehaviour
     [SerializeField] private int frameRate;
     [SerializeField] private Camera captureCamera;
     [SerializeField] private Shader viewSpaceNormal;
-    [SerializeField] private Vector2Int cellSize = new Vector2Int(100, 100);
+    [SerializeField] private Vector2Int cellSize;
     
     // Start is called before the first frame update
     public void Pixelate(AnimationClip clip, GameObject target, int frames, Vector2Int size)
@@ -105,25 +103,5 @@ public class AnimationCapture : MonoBehaviour
         }
         texture.SetPixels(pixels);
         texture.Apply();
-    }
-
-    /*private void SaveCapture(Texture2D diffuseMap, Texture2D normalMap)
-    {
-        var fileName = Path.GetFileNameWithoutExtension("CharacterTest");
-        var directory = Application.dataPath;
-        var diffusePath = string.Format("{0}/{1}{2}.{3}", directory, fileName, "DiffuseMap", "png");
-        var normalPath = string.Format("{0}/{1}{2}.{3}", directory, fileName, "NormalMap", "png");
-
-        File.WriteAllBytes(diffusePath, diffuseMap.EncodeToPNG());
-        File.WriteAllBytes(normalPath, normalMap.EncodeToPNG());
-
-        Debug.Log("DiffuseMap: " + diffusePath + " NormalMap: " + normalPath);
-        
-        AssetDatabase.Refresh();
-    }*/
-
-    private void CreatePreviewMaterial(Texture2D diffuseMap, Texture2D normalMap)
-    {
-        
     }
 }

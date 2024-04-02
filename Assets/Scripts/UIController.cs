@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 public class UIController : MonoBehaviour
@@ -15,12 +14,10 @@ public class UIController : MonoBehaviour
 
     private Animation animationPlayer;
     
-    private bool isPreviewingSprite;
     private bool isPreviewingAnimation;
     private bool isDragging;
     
     private ListView animationsListView;
-    private Label debugLabel;
     
     private Label selectedAnimation;
     private FloatField selectedField;
@@ -51,9 +48,8 @@ public class UIController : MonoBehaviour
     
     //Preview Button's
     private Button buttonAnimationPreview;
-    private Button buttonSpritePreview;
 
-    private int frames;
+    private int frames = 60;
     private Vector2Int cellSize;
     private Vector2 rotation;
     private Vector3 scale = Vector3.one;
@@ -61,12 +57,15 @@ public class UIController : MonoBehaviour
     private void Awake()
     {
         anchorPoint.GetComponent<Animation>();
+        cellSize = new Vector2Int(64, 64);
     }
+    
     private void OnEnable()
     {
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
 
         //Top Bar
+        Button newButton = root.Q<Button>("ButtonNew"); // Clear out all fields, open filebrowser to select new .GLB to load in.
         Button saveButton = root.Q<Button>("ButtonSave"); //Save URL to glb model + Transform settings + resolution --> JSON 
         Button loadButton = root.Q<Button>("ButtonLoad"); //Load JSON file
         Button exportButton = root.Q<Button>("ButtonExport"); //Export Normal Map.PNG or maybe Material
@@ -98,25 +97,54 @@ public class UIController : MonoBehaviour
         //Bottom Bar
         Button buttonLoadMesh = root.Q<Button>("ButtonLoadMesh");
         buttonAnimationPreview = root.Q<Button>("ButtonPreviewAnimation");
-        buttonSpritePreview = root.Q<Button>("ButtonPreviewSprite");
 
-        debugLabel = root.Q<Label>("DebugText");
-
+        newButton.clicked += () => NewProject();
         saveButton.clicked += () => SaveProjectData();
         loadButton.clicked += () => LoadProjectData();
         exportButton.clicked += () => Pixelate();
         
         buttonLoadMesh.clicked += () => LoadMesh();
         buttonAnimationPreview.clicked += () => PreviewAnimation();
-        buttonSpritePreview.clicked += () => PreviewSprite();
         
         RegisterFieldCallbacks();
         InitiateAnimationsList();
     }
-    
+    private void NewProject()
+    {
+        CleanPreviousMesh();
+
+        if (isPreviewingAnimation)
+        {
+            PreviewAnimation();
+        }
+        
+        animationClips.Clear();
+        animationsListView.RefreshItems();
+        
+        meshURL = "";
+        selectedAnimation.text = "Selected Anim:";
+
+        frames = 60;
+        cellSize = new Vector2Int(64, 64);
+        rotation = Vector2.zero;
+        scale = Vector3.one;
+
+        frameAmount.value = frames;
+        
+        cellSizeX.value = cellSize.x;
+        cellSizeY.value = cellSize.y;
+
+        rotationX.value = rotation.x;
+        rotationY.value = rotation.y;
+        
+        scaleX.value = scale.x;
+        scaleY.value = scale.y;
+        scaleZ.value = scale.z;
+    }
     private void SaveProjectData()
     {
         ProjectData projectData = new ProjectData();
+        projectData.frames = frames;
         projectData.meshURL = meshURL;
         projectData.cellSize = cellSize;
         projectData.rotation = rotation;
@@ -124,20 +152,20 @@ public class UIController : MonoBehaviour
         
         IOHandler.SerializeProjectData(projectData);
     }
-
     private void LoadProjectData()
     {
         ProjectData projectData = IOHandler.DeserializeProjectData();
         
-        CleanPrevious();
-
+        CleanPreviousMesh();
+        
         if (projectData == null) return;
         
         IOHandler.ImportMesh(projectData.meshURL, anchorPoint.transform, PostLoad);
+        frames = projectData.frames;
         cellSize = projectData.cellSize;
         rotation = projectData.rotation;
         scale = projectData.scale;
-
+    
         cellSizeX.value = cellSize.x;
         cellSizeY.value = cellSize.y;
 
@@ -148,21 +176,19 @@ public class UIController : MonoBehaviour
         scaleY.value = scale.y;
         scaleZ.value = scale.z;
     }
-    
     private void CaptureMouse(MouseDownEvent evt)
     {
         Debug.Log("Mouse down on: " + evt.target);
         evt.target.CaptureMouse();
         isDragging = true;
     }
-
     private void ReleaseMouse(MouseUpEvent evt)
     {
         Debug.Log("Mouse down up: " + evt.target);
         evt.target.ReleaseMouse();
         isDragging = false;
     }
-
+    
     #region Helper Functions
 
     private void ApplyRotation()
@@ -307,6 +333,7 @@ public class UIController : MonoBehaviour
     {
         UpdateAnimationsList(animations);
         meshURL = url;
+        
         //Apply settings
         ApplyRotation();
         ApplyScale();
@@ -348,6 +375,7 @@ public class UIController : MonoBehaviour
         animationsListView.itemsChosen += SampleAnimation;
         animationsListView.selectionChanged += SampleAnimation;
     }
+    
     private void UpdateAnimationsList(AnimationClip[] animations)
     {
         animationClips = animations.ToList();
@@ -387,10 +415,10 @@ public class UIController : MonoBehaviour
     }
     private void LoadMesh()
     {
-        CleanPrevious();
+        CleanPreviousMesh();
         IOHandler.ImportMesh(anchorPoint.transform, PostLoad);
     }
-    private void CleanPrevious()
+    private void CleanPreviousMesh()
     {
         if (anchorPoint.transform.childCount > 0)
         {
@@ -419,13 +447,6 @@ public class UIController : MonoBehaviour
         {
             animationPlayer.Stop();
         }
-    }
-    private void PreviewSprite()
-    {
-        isPreviewingSprite = !isPreviewingSprite;
-        buttonSpritePreview.text = isPreviewingSprite ? "Stop Preview" : "Preview Animation";
-
-        spritePreview.SetActive(isPreviewingSprite);
     }
     private void Pixelate()
     {
