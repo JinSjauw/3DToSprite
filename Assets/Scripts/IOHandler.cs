@@ -15,6 +15,9 @@ public static class IOHandler
         };
         
         var path = StandaloneFileBrowser.SaveFilePanel("Save File", "", "ProjectData", extensionFilter);
+        
+        if(path.Length <= 0) return;
+        
         string json = JsonUtility.ToJson(data);
         File.WriteAllText(path, json);
         Debug.Log(path);
@@ -31,12 +34,12 @@ public static class IOHandler
         ProjectData projectData = new ProjectData();
 
         var paths = StandaloneFileBrowser.OpenFilePanel("Title", "", "json", false);
-        if (paths.Length > 0)
-        {
-            Debug.Log("Path: " + paths[0]);
-            string json = File.ReadAllText(paths[0]);
-            projectData = JsonUtility.FromJson<ProjectData>(json);
-        }
+        if (paths.Length <= 0) return null;
+        
+        Debug.Log("Path: " + paths[0]);
+        string json = File.ReadAllText(paths[0]);
+        projectData = JsonUtility.FromJson<ProjectData>(json);
+        
         //projectData = JsonUtility.FromJson<ProjectData>()
         //Have to get the json string back from a file stream;
         return projectData;
@@ -60,6 +63,11 @@ public static class IOHandler
     
     private static async void LoadFromMemory(string path, Transform anchorPoint, Action<AnimationClip[], string> onSuccess)
     {
+        if (path.Length <= 0)
+        {
+            return;
+        }
+        
         byte[] data = File.ReadAllBytes(path);
         var gltf = new GltfImport();
         bool success = await gltf.LoadGltfBinary(data, new Uri("file://" + path));

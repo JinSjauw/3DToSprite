@@ -94,7 +94,6 @@ public class AnimationCapture : MonoBehaviour
             captureCamera.backgroundColor = cachedCameraColor;
             DestroyImmediate(rtFrame);
         }
-        
     }
     
     private void ClearAtlas(Texture2D texture, Color color)
